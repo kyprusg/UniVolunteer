@@ -7,7 +7,6 @@ import {
   Clock,
   Users,
   AlertCircle,
-  ChevronRight,
   Sparkles,
   Filter,
 } from 'lucide-react';
@@ -44,7 +43,6 @@ export function CatalogView() {
   const setCategoryFilter = useStore((s) => s.setCategoryFilter);
   const setStatusFilter = useStore((s) => s.setStatusFilter);
   const setSelectedEventId = useStore((s) => s.setSelectedEventId);
-  const selectedEventId = useStore((s) => s.selectedEventId);
 
   const [searchInput, setSearchInput] = useState(searchQuery);
   const [shakeEventId, setShakeEventId] = useState<string | null>(null);

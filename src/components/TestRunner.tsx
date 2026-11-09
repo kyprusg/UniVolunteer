@@ -3,6 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FlaskConical, Play, CheckCircle, XCircle, Clock, ChevronDown, ChevronUp, Loader2 } from 'lucide-react';
 import { VolunteerScoringService } from '../services/VolunteerScoringService';
 
+interface TestResult {
+  name: string;
+  passed: boolean;
+  message: string;
+  duration: number;
+}
+
 interface TestCase {
   name: string;
   description: string;
@@ -173,7 +180,7 @@ export function TestRunner() {
                 {passed}/{total} прошло
               </div>
               <div className="text-sm text-slate-500">
-                Время: {results.reduce((s, r) => s + r.duration, 0)} мс
+                Время: {results.reduce((s, r) => s + (r.duration ?? 0), 0)} мс
               </div>
             </motion.div>
           )}
@@ -199,7 +206,6 @@ export function TestRunner() {
         {TEST_SUITE.map((tc, i) => {
           const result = results[i];
           const isRunning = running && i === results.length;
-          const isPending = !result && !isRunning;
           const isExp = expanded === i;
 
           return (
@@ -299,12 +305,3 @@ export function TestRunner() {
     </div>
   );
 }
-export interface TestResult {
-  id?: string;
-  name: string;
-  passed: boolean;
-  error?: string;
-  details?: string;
-  duration?: number;
-}
-export const TestResult = {} as any;
