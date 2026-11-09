@@ -84,10 +84,3 @@ export const CATEGORY_MULTIPLIERS: Record<EventCategory, number> = {
   ECOLOGY: 1.1,
   SOCIAL: 1.0,
 };
-export const Application = {} as any;
-export const Badge = {} as any;
-export const Notification = {} as any;
-export const StudentProfile = {} as any;
-export const VolunteerEvent = {} as any;
-export const EventCategory = {} as any;
-export const ApplicationStatus = {} as any;

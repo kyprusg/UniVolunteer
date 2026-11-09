@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import {
+import type {
   VolunteerEvent,
   Application,
   StudentProfile,
@@ -292,5 +292,3 @@ export const useStore = create<AppState>()(
     }
   )
 );
-export const Page = {} as any;
-export const ViewMode = {} as any;

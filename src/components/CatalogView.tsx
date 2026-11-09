@@ -12,12 +12,8 @@ import {
   Filter,
 } from 'lucide-react';
 import { useStore } from '../store/useStore';
-import {
-  EventCategory,
-  CATEGORY_LABELS,
-  CATEGORY_COLORS,
-  VolunteerEvent,
-} from '../types';
+import type { EventCategory, VolunteerEvent } from '../types';
+import { CATEGORY_LABELS, CATEGORY_COLORS } from '../types';
 import { VolunteerScoringService } from '../services/VolunteerScoringService';
 import { ApplicationModal } from './ApplicationModal';
 

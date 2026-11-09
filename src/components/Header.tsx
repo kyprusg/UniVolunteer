@@ -6,12 +6,10 @@ import {
   User,
   LayoutGrid,
   ClipboardList,
-  FlaskConical,
-  ChevronDown,
   RotateCcw,
-  X,
 } from 'lucide-react';
-import { useStore, ViewMode, Page } from '../store/useStore';
+import { useStore } from '../store/useStore';
+import type { ViewMode, Page } from '../store/useStore';
 
 export function Header() {
   const viewMode = useStore((s) => s.viewMode);
@@ -31,7 +29,6 @@ export function Header() {
     { page: 'catalog', label: 'Каталог', icon: <LayoutGrid className="w-4 h-4" />, modes: ['student'] },
     { page: 'profile', label: 'Профиль', icon: <User className="w-4 h-4" />, modes: ['student'] },
     { page: 'curator', label: 'Панель куратора', icon: <ClipboardList className="w-4 h-4" />, modes: ['curator'] },
-    { page: 'tests', label: 'Тесты', icon: <FlaskConical className="w-4 h-4" />, modes: ['student', 'curator'] },
   ];
 
   const visibleNavItems = navItems.filter((item) => item.modes.includes(viewMode));

@@ -13,7 +13,8 @@ import {
   AlertCircle,
 } from 'lucide-react';
 import { useStore } from '../store/useStore';
-import { CATEGORY_LABELS, CATEGORY_COLORS, EventCategory } from '../types';
+import type { EventCategory } from '../types';
+import { CATEGORY_LABELS, CATEGORY_COLORS } from '../types';
 import { VolunteerScoringService } from '../services/VolunteerScoringService';
 
 const CATEGORIES: EventCategory[] = ['ECOLOGY', 'DONATION', 'EMERGENCY', 'SOCIAL'];

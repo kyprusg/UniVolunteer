@@ -1,4 +1,4 @@
-import { VolunteerEvent, Application, Badge } from '../types';
+import type { VolunteerEvent, Application, Badge } from '../types';
 
 export const SEED_BADGES: Badge[] = [
   {
